@@ -1,6 +1,7 @@
 local wezterm = require('wezterm')
 local platform = require('utils.platform')
 local backdrops = require('utils.backdrops')
+local upload = require('utils.upload')
 local act = wezterm.action
 
 local mod = {}
@@ -57,6 +58,9 @@ local keys = {
    -- copy/paste --
    { key = 'c',          mods = 'CTRL|SHIFT',  action = act.CopyTo('Clipboard') },
    { key = 'v',          mods = 'CTRL|SHIFT',  action = act.PasteFrom('Clipboard') },
+
+   -- Clipboard file upload over SSH using SCP.
+   { key = 'U', mods = 'CTRL|SHIFT', action = upload.action },
 
    { key = 'n',          mods = 'CTRL|SHIFT',  action = act.SendString('\u{2660}') },
    { key = 's',          mods = 'CTRL|SHIFT',  action = act.SendString('\u{203D}') },

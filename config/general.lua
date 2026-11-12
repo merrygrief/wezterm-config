@@ -7,7 +7,11 @@ return {
    status_update_interval = 1000,
    audible_bell = 'Disabled',
 
+   canonicalize_pasted_newlines = 'LineFeed',
    scrollback_lines = 20000,
+
+   initial_cols = 160,
+   initial_rows = 45,
 
    hyperlink_rules = {
       -- Matches: a URL in parens: (URL)
